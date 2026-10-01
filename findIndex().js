@@ -1,4 +1,4 @@
-// exercicio 1
+//exercicio 1
 
 const produtos = [
   { id: 1, nome: "Notebook", preco: 3500, estoque: 5, ativo: true },
@@ -7,17 +7,24 @@ const produtos = [
   { id: 4, nome: "Monitor", preco: 1200, estoque: 3, ativo: true }
 ];
 
- const procura = produtos.find((p) => p.id === 3 );
- console.log(procura);
+function deletarProdutoPorId(id) {
+    const index = estoque.findIndex((item) => item.id === id);
+    if (index === -1) {
+        return { status: 404, message: "Produto não localizado para exclusão." }
+    }
+};
 
-//exercicio 2
+//exercicio 2 
 
-const produto1 = [
+const produtos1 = [
   { id: 1, nome: "Notebook", preco: 3500, estoque: 5, ativo: true },
   { id: 2, nome: "Mouse", preco: 80, estoque: 0, ativo: true },
   { id: 3, nome: "Teclado", preco: 150, estoque: 10, ativo: false },
   { id: 4, nome: "Monitor", preco: 1200, estoque: 3, ativo: true }
 ];
 
-const estoque = produto1.find((produto1) => produto1 >= 0);
-console.log("Primeiro zero >= 0:", estoque);
+const indiceInativo = produtos1.findIndex(
+  produto1 => produto1.ativo === false
+);
+
+console.log("8.", indiceInativo);
